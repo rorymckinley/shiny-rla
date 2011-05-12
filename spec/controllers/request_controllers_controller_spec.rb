@@ -12,5 +12,6 @@ describe RequestControllersController do
 
     get :index, :filter => 'distinct'
     response.should be_ok
+    ActiveSupport::JSON.decode(response.body).should == { 'controllers' => ['A', 'C']}
   end
 end

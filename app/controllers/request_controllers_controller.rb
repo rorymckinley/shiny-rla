@@ -1,5 +1,5 @@
 class RequestControllersController < ApplicationController
   def index
-    render :text => ''
+    render :json => Request.get_distinct_controllers
   end
 end
